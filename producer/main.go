@@ -14,7 +14,7 @@ type Message struct {
 	UID         string `json:"uid"`
 }
 
-var addr = []string{"192.168.3.113:9092", "192.168.3.114:9092", "192.168.3.115:9092"}
+var addr = []string{"<ip>"}
 
 func main() {
 	// 连接kafka
