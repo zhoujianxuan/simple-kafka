@@ -38,7 +38,6 @@ func consume(group *sarama.ConsumerGroup, wg *sync.WaitGroup, name string) {
 			panic(err)
 		}
 	}
-	wg.Done()
 }
 
 type consumerGroupHandler struct {
