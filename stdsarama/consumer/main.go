@@ -3,8 +3,9 @@ package main
 import (
 	"context"
 	"fmt"
-	"github.com/Shopify/sarama"
 	"sync"
+
+	"github.com/Shopify/sarama"
 )
 
 // kafka consumer
@@ -31,7 +32,7 @@ func consume(group *sarama.ConsumerGroup, wg *sync.WaitGroup, name string) {
 	ctx := context.Background()
 	for {
 		//topic := []string{"tiantian_topic1","tiantian_topic2"} 可以消费多个topic
-		topics := []string{"web_log"}
+		topics := []string{"demo_test"}
 		handler := consumerGroupHandler{name: name}
 		err := (*group).Consume(ctx, topics, handler)
 		if err != nil {
